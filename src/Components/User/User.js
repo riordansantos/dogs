@@ -4,6 +4,7 @@ import { UserContext } from '../../UserContext';
 import Head from '../Helper/Head';
 import UserHeader from './UserHeader';
 import UserPhotoPost from './UserPhotoPost';
+import Feed from '../Feed/Feed';
 
 const User = () => {
   const { data } = React.useContext(UserContext);
@@ -13,7 +14,7 @@ const User = () => {
       <Head title="Minha Conta" />
       <UserHeader />
       <Routes>
-        {/*<Route path="/" element={<Feed user={data.id} />} />*/}
+        <Route path="/" element={<Feed user={data.id} />} />
         <Route path="postar" element={<UserPhotoPost />} />
   
       </Routes>
